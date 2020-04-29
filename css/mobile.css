@@ -1,0 +1,43 @@
+.l-heading {
+  font-size: 2rem;
+}
+#navbar h1 {
+  font-size: 1.25rem;
+}
+/* Hide the links inside the navigation menu (except for logo/home) */
+#navbar #nav-links{
+  display: none;
+  margin: auto;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3.75rem;
+  background: #333;
+}
+
+#navbar #nav-links ul {
+  justify-content: center;
+    align-items: center;
+}
+
+/* Style navigation menu links */
+#navbar #nav-links ul li a {
+  color: #fff;
+  padding: 0.55rem 0.5rem;
+  font-size: 0.75rem;
+  display: block;
+}
+
+/* Style the hamburger menu */
+#navbar #toggle-btn {
+  background: #ba335d;
+  margin: 1rem;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+/* TODO: Make responsive style on scroll nav-links */

@@ -2,8 +2,10 @@
 window.addEventListener('scroll', function () {
   if (window.scrollY > 100) {
     this.document.querySelector("#navbar").style.padding = 0;
+    this.document.querySelector('#toggle-btn').style.margin = '0.5rem';
   } else {
     this.document.querySelector("#navbar").style.padding = '0.75rem';
+    this.document.querySelector('#toggle-btn').style.margin = '1rem';
   }
 });
 
@@ -23,12 +25,11 @@ $('.nav-btn').on('click', function (event) {
 
 $(document).on("scroll", function (event) {
   const scrollPos = $(document).scrollTop() + 85;
-  $('#navbar .container ul li a').each(function () {
+  $('#navbar .container #nav-links ul li a').each(function () {
     let currentLink = $(this);
     let refElement = $(currentLink.attr('href'));
-    console.log(scrollPos);
     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-      $('#navbar .container ul li a').removeClass("active");
+      $('#navbar .container #nav-links ul li a').removeClass("active");
       currentLink.addClass("active");
     }
     else {
@@ -36,3 +37,13 @@ $(document).on("scroll", function (event) {
     }
   })
 });
+
+// Show items on click toggle btn
+function showNavItems() {
+  const btn = document.getElementById('nav-links');
+  if (btn.style.display === 'block') {
+    btn.style.display = 'none';
+  } else {
+    btn.style.display = 'block';
+  }
+}
